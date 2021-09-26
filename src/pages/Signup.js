@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import {
   Container,
@@ -16,7 +16,6 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import LockIcon from "@material-ui/icons/Lock";
 import FaceIcon from "@material-ui/icons/Face";
 import EmailIcon from "@material-ui/icons/Email";
-import { authCantSeeAuthScreen } from "../utils/helpers";
 import PersonIcon from "@material-ui/icons/Person";
 import PhoneIcon from "@material-ui/icons/Phone";
 
@@ -37,8 +36,8 @@ const defaultProps = {
 };
 
 export default function Login(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email] = useState("");
+  const [password] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const classes = useStyles();
